@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CarteModel;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -15,51 +16,49 @@ class CartController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function addToCart(Request $request, $menuId)
     {
-        //
+        $user = $request->user();
+        $cart = $user->cart ?? new CarteModel(['items' => []]);
+
+        $cart->addItem($menuId, $request->input('quantity', 1));
+
+        return response()->json(['message' => 'Item added to cart']);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function removeFromCart(Request $request, $menuId)
     {
-        //
+        $user = $request->user();
+        $cart = $user->cart;
+
+        if ($cart) {
+            $cart->removeItem($menuId);
+        }
+
+        return response()->json(['message' => 'Item removed from cart']);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function updateCartItem(Request $request, $menuId)
     {
-        //
+        $user = $request->user();
+        $cart = $user->cart;
+
+        if ($cart) {
+            $cart->updateItemQuantity($menuId, $request->input('quantity'));
+        }
+
+        return response()->json(['message' => 'Cart item updated']);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function viewCart(Request $request)
     {
-        //
-    }
+        $user = $request->user();
+        $cart = $user->cart;
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+        if (!$cart) {
+            return response()->json(['message' => 'Cart is empty']);
+        }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return response()->json(['cart' => $cart]);
     }
 }
