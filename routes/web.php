@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\CalendarController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StafController;
@@ -24,6 +25,7 @@ Route::delete("/product/delete/{menu}", [MenuController::class, "destroy"])->nam
 
 Route::get('/blog', [MenuController::class, "blog"])->name("blog");
 Route::get('/tablle', [TablleController::class, "tablle"])->name("tablle");
+Route::get('/carte', [CartController::class, "index"])->name("cart");
 
 
 

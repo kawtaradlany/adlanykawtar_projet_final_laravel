@@ -1,3 +1,9 @@
+
+@extends('layouts.index')
+@section('content')
+@include('home.components.navbar')
+    
+
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -45,3 +51,9 @@
         </div>
     </form>
 </x-guest-layout>
+
+
+@endsection 
+
+
+
