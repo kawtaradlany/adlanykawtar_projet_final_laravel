@@ -314,7 +314,7 @@
                 <div class="row">
                     <div class="col" style="padding-left:0;">ITEMS {{ count($cart->items ?? []) }}</div>
                     <!-- Display total price -->
-                    <div class="col text-right">&euro; {{ $totalPrice }}</div>
+                    <div class="col text-right">&euro; 55</div>
                 </div>
                 <form>
                     <p>Delivery</p>
@@ -326,8 +326,10 @@
                 </form>
                 <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
                     <div class="col">TOTAL PRICE</div>
-                    <!-- Display total price -->
+                    {{-- <!-- Display total price -->
                     <div class="col text-right">&euro; {{ $totalPrice }}</div>
+                     --}}
+                    <div class="col text-right">&euro; 555</div>
                 </div>
                 <button class="btn">CHECKOUT</button>
             </div>
