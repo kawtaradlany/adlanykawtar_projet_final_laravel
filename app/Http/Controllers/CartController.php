@@ -15,6 +15,20 @@ class CartController extends Controller
         return view("cart.carte");
 
     }
+    public function show()
+    {
+        $user = auth()->user();
+        $cart = $user->cart ?? null;
+
+        $totalPrice = 0;
+        if ($cart) {
+            foreach ($cart->items as $item) {
+                $totalPrice += $item['price'] * $item['quantity'];
+            }
+        }
+
+        return view('cart', compact('cart', 'totalPrice'));
+    }
 
     public function addToCart(Request $request, $menuId)
     {

@@ -263,7 +263,6 @@
     </div>
 @endsection --}}
 
-
 @extends('layouts.index')
 
 @section('content')
@@ -314,7 +313,7 @@
                 <hr>
                 <div class="row">
                     <div class="col" style="padding-left:0;">ITEMS {{ count($cart->items ?? []) }}</div>
-                    <!-- Calculate total price -->
+                    <!-- Display total price -->
                     <div class="col text-right">&euro; {{ $totalPrice }}</div>
                 </div>
                 <form>
