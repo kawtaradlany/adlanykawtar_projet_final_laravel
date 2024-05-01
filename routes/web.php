@@ -25,8 +25,8 @@ Route::delete("/product/delete/{menu}", [MenuController::class, "destroy"])->nam
 
 Route::get('/blog', [MenuController::class, "blog"])->name("blog");
 Route::get('/tablle', [TablleController::class, "tablle"])->name("tablle");
-Route::get('/carte', [CartController::class, "index"])->name("cart");
-
+// 
+Route::get('/carte', [CartController::class, "index"])->name("carte");
 
 
 

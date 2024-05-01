@@ -1,3 +1,7 @@
+@extends('layouts.index')
+@include('home.components.navbar')
+{{--  --}}
+
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
         @csrf

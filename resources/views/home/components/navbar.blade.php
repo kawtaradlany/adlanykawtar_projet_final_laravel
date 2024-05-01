@@ -1,11 +1,15 @@
-<nav class="bg-[#ca8920] dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+
+
+
+<nav class="bg-[#874a11] dark:bg-gray-900 fixed w-full z-20 top-0 start-0 ">
+    {{-- #ca8920 --}}
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
             {{-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo"> --}}
 
             <a href="{{ route('home') }}"
-                class="self-center text-2xl font-semibold whitespace-nowrap text-white hover:text-[#48230e]"><i
-                    class="fa-solid fa-utensils"></i>Morocco</a>
+                class="self-center text-2xl font-semibold whitespace-nowrap text-[#ca8920] hover:text-white"><i
+                    class="fa-solid fa-utensils"></i>The riad </a>
         </a>
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-2">
             @guest
@@ -20,7 +24,7 @@
                 </button>
             @endguest
             <button>
-                <a href="{{ route('cart') }}" class="text-white"> 
+                <a href="{{ route('carte') }}" class="text-white"> 
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
 
@@ -42,25 +46,25 @@
             <ul
                 class="flex flex-col bg-transparent p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg- dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700  ">
                 <li>
-                    <a href="{{ route('home') }}" class="block py-2 px-3 text-white hover:text-[#48230e]"
+                    <a href="{{ route('home') }}" class="block py-2 px-3  text-[#ca8920] hover:text-white"
                         aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a href="{{ route('menu') }}" class="block py-2 px-3 text-white hover:text-[#48230e]">Menu</a>
+                    <a href="{{ route('menu') }}" class="block py-2 px-3  text-[#ca8920] hover:text-white">Menu</a>
                 </li>
                 <li>
                     <a href="{{ route('calendar') }}"
-                        class="block py-2 px-3  text-white hover:text-[#48230e]">Reservation</a>
+                        class="block py-2 px-3   text-[#ca8920] hover:text-white">Reservation</a>
                 </li>
                 <li>
-                    <a href="{{ route('blog') }}" class="block py-2 px-3 text-white hover:text-[#48230e]">Review</a>
+                    <a href="{{ route('blog') }}" class="block py-2 px-3  text-[#ca8920] hover:text-white">Review</a>
                 </li>
                 <li>
-                    <a href="/#contact" class="block py-2 px-3 text-white hover:text-[#48230e]">Contact
+                    <a href="/#contact" class="block py-2 px-3  text-[#ca8920] hover:text-white">Contact
                         Us</a>
                 </li>
                 <li>
-                    <a href="#aboutus" class="block py-2 px-3 text-white hover:text-[#48230e]">About
+                    <a href="#aboutus" class="block py-2 px-3  text-[#ca8920] hover:text-white">About
                         Us</a>
                 </li>
 

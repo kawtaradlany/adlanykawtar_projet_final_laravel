@@ -1,10 +1,16 @@
 @extends('layouts.index')
 @section('content')
+@include('home.components.navbar')
 
 
-<div class="w-1/2 bg-white rounded-3xl border-none p-3" id="calendar"></div>
-@include('calendar.component.modal')
-<h1>hello</h1>
+
+<div class="" style="background-image: url('img/image.png'); background-size: cover; background-position: center; height: auto;">>
+    <h1 class="pt-52 text-4xl md:text-6xl lg:text-8xl font-bold mb-8 text-center px-4 text-white hover:text-[#48230e]">Réservez dès maintenant pour une expérience parfaite !
+    </h1>
+    <div class="pt-85 w-1/2 mx-auto opacity-80 bg-[#ca8920]  border-none" id="calendar">
+    
+    </div>
+    @include('calendar.component.modal')
 <div class="flex flex-col flex-wrap gap-5">
 
     @foreach ($reservations as $reservation)
@@ -138,3 +144,5 @@
 
     
 @endsection
+
+</div>
