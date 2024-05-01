@@ -1,32 +1,27 @@
-<nav class="bg-[#ca8920] dark:bg-gray-900 fixed w-full z-20 top-0 start-0 ">
-    {{--  --}}
+<nav class="bg-primary fixed w-full z-20 font-sans top-0 start-0 ">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-            {{-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo"> --}}
-
-            <a href="{{ route('home') }}"
-                class="self-center text-2xl font-semibold whitespace-nowrap text-white hover:text-[#48230e]"><i
-                    class="fa-solid fa-utensils"></i>The riad </a>
+        <a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
+            <img src="{{ asset('img/logover2.png') }}" class="h-12 pt-2" alt="Logo">    
         </a>
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-2">
             @guest
                 <button type="button"
-                    class=" hover:bg-[#48230e]  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    <a href="{{ route('login') }}" class="text-white">login</a>
+                    class=" hover:bg-secondary  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center ">
+                    <a href="{{ route('login') }}" class="text-accent"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
                 </button>
                 <button type="button"
-                    class="text-white  hover:bg-[#48230e] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    <a href="{{ route('register') }}" class="text-white">registre</a>
+                    class="text-background  hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
+                    <a href="{{ route('register') }}" class="text-accent"><i class="fa-solid fa-user-plus"></i></a>
 
                 </button>
             @endguest
-            <button>
-                <a href="{{ route('carte') }}" class="text-white"> 
+            <button class="font-medium rounded-lg text-sm px-4 py-2 text-center">
+                <a href="{{ route('carte') }}" class="text-accent"> 
                     <i class="fa-solid fa-cart-shopping"></i>
                 </a>
 
             </button>
-
+            
             <button data-collapse-toggle="navbar-sticky" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-sticky" aria-expanded="false">
@@ -39,34 +34,30 @@
             </button>
 
         </div>
-        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+        <div class="items-center justify-between  font-serif hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul
-                class="flex flex-col bg-transparent p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg- dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700  ">
+                class="flex flex-col bg-transparent p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg- ">
                 <li>
-                    <a href="{{ route('home') }}" class="block py-2 px-3 text-white hover:text-[#48230e]"
+                    <a href="{{ route('home') }}" class="block py-2 px-3 text-accent hover:text-secondary"
                         aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a href="{{ route('menu') }}" class="block py-2 px-3 text-white hover:text-[#48230e]">Menu</a>
+                    <a href="{{ route('menu') }}" class="block py-2 px-3 text-accent hover:text-secondary">Menu</a>
                 </li>
                 <li>
                     <a href="{{ route('calendar') }}"
-                        class="block py-2 px-3  text-white hover:text-[#48230e]">Reservation</a>
+                        class="block py-2 px-3  text-accent hover:text-secondary">Reservation</a>
                 </li>
                 <li>
-                    <a href="{{ route('blog') }}" class="block py-2 px-3 text-white hover:text-[#48230e]">Review</a>
+                    <a href="{{ route('blog') }}" class="block py-2 px-3 text-accent hover:text-secondary">Review</a>
                 </li>
                 <li>
-                    <a href="/#contact" class="block py-2 px-3 text-white hover:text-[#48230e]">Contact
-                        Us</a>
-                </li>
-                <li>
-                    <a href="#aboutus" class="block py-2 px-3 text-white hover:text-[#48230e]">About
+                    <a href="/#contact" class="block py-2 px-3 text-accent hover:text-secondary">Contact
                         Us</a>
                 </li>
 
             </ul>
-
+           
             @auth
 
                 <form method="POST" action="{{ route('logout') }}">
@@ -75,10 +66,12 @@
                     <x-dropdown-link :href="route('logout')"
                         onclick="event.preventDefault();
                                     this.closest('form').submit();">
-                        {{ __('Log Out') }}
+                        <i class="fa-solid fa-arrow-right-from-bracket text-bright-red"></i>
                     </x-dropdown-link>
                 </form>
             @endauth
+            
+
         </div>
     </div>
 </nav>
