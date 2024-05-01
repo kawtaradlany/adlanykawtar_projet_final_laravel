@@ -6,6 +6,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StafController;
+use App\Http\Controllers\StripeController;
 use App\Http\Controllers\TablleController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,10 @@ Route::get('/blog', [MenuController::class, "blog"])->name("blog");
 Route::get('/tablle', [TablleController::class, "tablle"])->name("tablle");
 // 
 Route::get('/carte', [CartController::class, "index"])->name("carte");
+// strip
+
+Route::get('/session',[StripeController::class , "session"])->name("session");
+Route::get('/success',[StripeController::class , "session"])->name("success");
 
 
 

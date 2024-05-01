@@ -82,7 +82,12 @@
                  --}}
                 <div class="col text-right">&euro; 555</div>
             </div>
-            <button class="btn">done</button>
+            <form action="{{ route ("session") }}" method="get">
+                @csrf
+                <button class="btn">done</button>
+
+
+            </form>
         </div>
     </div>
 </div>

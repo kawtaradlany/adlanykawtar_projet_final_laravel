@@ -1,5 +1,5 @@
 <section class="section1"
-    style="background-image: url('img/image.png'); background-size: cover; background-position: center; height: 100vh;">
+    style=" background-image: url('img/image.png'); background-size: cover; background-position: center; height: 100vh;">
     <div class="container mx-auto flex flex-col items-center justify-center h-full text-white">
         <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-8 text-center px-4 hover:text-[#48230e]">On se retrouve
             pour bien manger !
