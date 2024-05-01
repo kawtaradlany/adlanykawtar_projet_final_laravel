@@ -7,7 +7,7 @@
         <p class="text-lg md:text-xl mb-8 text-center px-4 animate-fade-in-up">Faites des réservations, explorez nos
             menus et profitez d'une excellente expérience culinaire !</p>
         <a href="/calendar"
-            class="bg-accent text-background px-8 py-4 rounded-lg font-semibold hover:bg-primary transition duration-300 animate-bounce">Réserver
+            class="bg-accent text-background px-8 py-4 rounded-lg font-semibold hover:bg-primary transition  duration-300 animate-bounce">Réserver
             maintenant</a>
     </div>
 </section>
