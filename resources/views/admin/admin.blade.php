@@ -5,7 +5,7 @@
 
     <form action="{{ route('menu.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <h1 class="pt-60 text-center text-5xl">Welcom admin ! let's edit your restaurant !</h1>
+        <h1 class="text-primary pt-60 text-center text-5xl">Salut, admin ! C'est l'heure de mettre le menu à jour !</h1>
         {{-- <form action="{{ route('menu.store') }}" method="POST" enctype="multipart/form-data"> --}}
         @csrf
         <div class="flex lg:flex-row flex-col items-center justify-center gap-2 mb-8   w-[100%] lg:h-[80vh] h-fit">
@@ -25,7 +25,7 @@
                     placeholder="la description du plat" type="text">
                 <input class="border-2 rounded-md border-slate-600 w-[40vw] h-[7vh] p-2 " name="image"
                     placeholder="l'image du plat" type="file">
-                <button class="bg-black py-2 text-white rounded-md border-black  w-[40vw] h-[7vh]">submit</button>
+                <button class="bg-primary py-2 text-white rounded-md border-black  w-[40vw] h-[7vh]">Ajouter</button>
     </form>
 
     {{--  --}}
@@ -39,9 +39,9 @@
                 <div class="card-body p-4">
                     <h2 class="text-xl font-bold mb-2">{{ $menu->name }}</h2>
                     <p class="text-gray-700">{{ $menu->description }}</p>
-                    <p class="text-gray-700">{{ $menu->price }} $</p>
+                    <p class="text-gray-700">{{ $menu->price }} dh</p>
                     <div class="flex justify-end mt-4">
-                        <button class="bg-yellow-300 px-5 w-[15vw] h-[5vh] py-1 rounded-md text-sm font-mono">
+                        <button class="bg-accent px-5 w-[15vw] h-[5vh] py-1 rounded-md text-sm font-mono">
                             Delete</button>
         </form>
         {{--  --}}

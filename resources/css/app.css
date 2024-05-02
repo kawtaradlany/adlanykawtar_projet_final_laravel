@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+/* *{
     font-family: "../../public/fonts/PlayfairDisplay-ExtraBoldItalic.ttf" !important;
+} */
+
+.elementtest {
+    font-family: ' Playfair Display';
 }

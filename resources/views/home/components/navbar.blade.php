@@ -1,4 +1,4 @@
-<nav class="bg-primary fixed w-full z-20 font-sans top-0 start-0 ">
+<nav class="bg-primary  fixed w-full z-20 top-0 start-0 ">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
             <img src="{{ asset('img/logover2.png') }}" class="h-12 pt-2" alt="Logo">    
@@ -38,21 +38,21 @@
             <ul
                 class="flex flex-col bg-transparent p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg- ">
                 <li>
-                    <a href="{{ route('home') }}" class="block py-2 px-3 text-accent hover:text-secondary"
+                    <a href="{{ route('home') }}" class="font-playfair text-xl block py-2 px-3 text-accent hover:text-secondary"
                         aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a href="{{ route('menu') }}" class="block py-2 px-3 text-accent hover:text-secondary">Menu</a>
+                    <a href="{{ route('menu') }}" class="font-playfair text-xl block py-2 px-3 text-accent hover:text-secondary">Menu</a>
                 </li>
                 <li>
                     <a href="{{ route('calendar') }}"
-                        class="block py-2 px-3  text-accent hover:text-secondary">Reservation</a>
+                        class="font-playfair text-xl block py-2 px-3  text-accent hover:text-secondary">Reservation</a>
                 </li>
                 <li>
-                    <a href="{{ route('blog') }}" class="block py-2 px-3 text-accent hover:text-secondary">Review</a>
+                    <a href="{{ route('blog') }}" class="font-playfair text-xl block py-2 px-3 text-accent hover:text-secondary">Review</a>
                 </li>
                 <li>
-                    <a href="/#contact" class="block py-2 px-3 text-accent hover:text-secondary">Contact
+                    <a href="/#contact" class="font-playfair text-xl block py-2 px-3 text-accent hover:text-secondary">Contact
                         Us</a>
                 </li>
 
@@ -75,3 +75,35 @@
         </div>
     </div>
 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

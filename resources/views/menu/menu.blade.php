@@ -5,31 +5,24 @@
     @include('home.components.navbar')
 
 
-    <section class="section1"
-        style="background-image: url('img/image.png'); background-size: cover; background-position: center; height: 100vh;">
-        <div class="container mx-auto flex flex-col items-center justify-center h-full text-white">
-            <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-8 text-center px-4 hover:text-[#48230e]">Notre Menu !
-            </h1>
-            <p class="text-lg md:text-xl mb-8 text-center px-4 hover:text-[#48230e]">Faites des réservations, explorez nos
-                menus et profitez d'une
-                excellente expérience culinaire !</p>
-            {{-- <a href="#menu" class="bg-white text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Voir le Menu</a> --}}
+    <section class="section1 h-96 relative"
+        style="background-image: url('img/image.png'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0">
+            <div class="bg-black bg-opacity-50 absolute inset-0"></div>
+            <div class="container mx-auto flex flex-col items-center justify-center h-full text-white relative">
+                <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-8 text-center px-4 font-playfair ">Notre Menu
+                </h1>
+                <div class="font-playfair text-lg font-bold"><a href="/" rel="v:url" property="v:title">Home</a> » <span class="current">Menu</span></div>
+            </div>
         </div>
     </section>
 
 
-    <section class="bg-[#d08c1a]">
-        <div class="container mx-auto my-8">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-4 md:mb-8">Our menu</h2>
-            <p class="text-lg text-center">Our menu celebrates the very best of local produce, sourced from our country’s
-                most respected farmers and artisans. Beyond meat, our coals inspire seafood, fish, poultry and fresh, earthy
-                vegetable dishes, not to mention our tempting desserts. Each day a seasonal showstopper pays homage to the
-                delicious diversity of cooking with fire – a dish you simply have to try.</p>
-        </div>
-        
         <!-- Section Plats  -->
-        
-        @foreach ($menus as $menu)
+        <!-- component -->
+<!-- This is an example component -->
+
+        <!-- @foreach ($menus as $menu)
         <h2 class="text-2xl md:text-3xl font-semibold mb-4 mt-8 text-center"></h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-white shadow-md rounded-lg p-6">
@@ -39,7 +32,7 @@
                 <p class="text-lg font-semibold mb-4">Prix :{{ $menu->price }}</p>
                 <div class="flex justify-between">
                     <button
-                    class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300"><a href="{{ route('carte') }}">Commander</a></button>
+                    class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Commander</button>
                     
                     
                     <!-- Modal toggle -->
@@ -118,7 +111,33 @@
                     </div> --}}
                 </div>
             </div>
-            @endforeach
+            @endforeach 
+            
+            <section class="section py-4">
+                <div class="container mx-auto my-8">
+                    <p class=" text-primary  text-6xl font-playfair text-center">Let's TakeAway Something.</p>
+                </div>
+                <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    @foreach ($menus as $menu)
+                    <div class=" rounded-3xl shadow-xl overflow-hidden">
+                        <div class="h-56 md:h-64 lg:h-72" style="background-image: url('{{ asset('img/plat.jpg' /* . $menu->image */ ) }}'); background-size: cover; background-position: center;"></div>
+                        <div class="p-4 sm:p-6">
+                            <p class="font-bold text-text text-2xl leading-7 mb-1 font-playfair">{{ $menu->name }}</p>
+                            <div class="flex flex-row">
+                                <p class="text-[#3C3C4399] text-lg mr-2 line-through">{{ $menu->old_price }}</p>
+                                <p class="text-lg font-bold text-accent">{{ $menu->price }}Dh</p>
+                            </div>
+                            <p class="text-primary font-[15px] mt-4 font-sans">{{ $menu->description }}</p>
+                            <a target="_blank" href="{{ route('carte') }}" class="font-playfair block mt-6 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-accent rounded-[14px] hover:bg-secondary text-background focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80">
+                                Order
+                            </a>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </section>
+
 
     </section>
+    @include('home.components.footer')
 @endsection

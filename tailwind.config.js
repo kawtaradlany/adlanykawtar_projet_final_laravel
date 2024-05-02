@@ -27,10 +27,11 @@ export default {
                 'background':'#f8f8f8',
                 'accent':'#cb945b',
             },
-            // fontFamily: {
-            //     sans: ['Figtree', ...defaultTheme.fontFamily.sans, require('flowbite/plugin')],
-            //     serif: ['Playfair Display', 'serif'],
-            // },
+            fontFamily: {
+                'sans': ['Montserrat', 'sans-serif'],
+                'playfair': ['Playfair Display', 'serif'],
+            },
+            
             
         },
     },
