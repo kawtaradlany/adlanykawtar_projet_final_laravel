@@ -90,10 +90,12 @@
         </div>
     </div>
     <div class="flex items-center flex-col sm:flex-row justify-center gap-3 mt-8">
-        
-        <button class="rounded-full w-full max-w-[280px] py-4 text-center justify-center items-center bg-accent font-semibold text-lg text-white flex transition-all duration-500 hover:bg-indigo-700">Continue to Payment
-            <i class="fas fa-arrow-right"></i>
-        </button>
+        <form action="{{ route("session") }}" method="get">
+            @csrf
+            <button class="rounded-full w-full max-w-[280px] py-4 text-center justify-center items-center bg-accent font-semibold text-lg text-white flex transition-all duration-500 hover:bg-indigo-700">Continue to Payment
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </form>
     </div>
 </div>
 </section>
